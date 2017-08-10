@@ -1,0 +1,12 @@
+{
+    "require": {
+        "slim/slim": "^3.8",
+        "slim/php-view": "^2.2",
+        "monolog/monolog": "^1.23"
+    },
+    "autoload": {
+      "psr-4": {
+        "": "classes/"
+    }
+
+}}

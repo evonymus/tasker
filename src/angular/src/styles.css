@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+html,
+body {
+  height: 100%;
+}
+#cover {
+  /* background-image: url('assets/img/wallpaper.png'); */
+  background: #222 url('assets/img/wallpaper.png') bottom center no-repeat;
+  background-size: cover;
+  /* color: #721372; */
+  color: red;
+  height:100%;
+  text-align:center;
+  display: flex;
+  align-items: center;
+}
+#cover p {
+  color:white;
+}
+
+#cover-caption {
+  width: 100%;
+}
+
+#header_id {border-style:solid;
+  border-width: 2px;
+  min-height: 80px;
+  }
