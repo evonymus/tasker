@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import {MenuItems} from '../../model/menu/MenuItems';
 
 @Component({
@@ -6,10 +6,15 @@ import {MenuItems} from '../../model/menu/MenuItems';
   templateUrl: './menu.component.html'
 })
 export class MenuComponent implements OnInit {
-  menu: MenuItems;
+  @Input() menu: MenuItems;
+  @Output() searchClicked = new EventEmitter<MenuItems>();
 
   constructor() {
-    this.menu = new MenuItems();
+  }
+
+  onSearchClick() {
+    this.menu.items[0].name="changed";
+    this.searchClicked.emit(this.menu);
   }
 
   ngOnInit() {
